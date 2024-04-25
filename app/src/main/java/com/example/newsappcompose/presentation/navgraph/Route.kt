@@ -2,7 +2,7 @@ package com.example.newsappcompose.presentation.navgraph
 
 sealed class Route(val route: String) {
 
-    data object OnBoardingScreen : Route(route = "onBoardingScreen")
+    object OnBoardingScreen : Route(route = "onBoardingScreen")
     object HomeScreen : Route(route = "homeScreen")
     object SearchScreen : Route(route = "searchScreen")
     object BookMarkScreen : Route(route = "bookMarkScreen")
