@@ -55,7 +55,6 @@ fun OnBoardingScreen(
         HorizontalPager(state = pagerState) { index ->
             OnBoardingPage(page = pages[index])
         }
-
         Spacer(modifier = Modifier.weight(1f))
 
         Row(
@@ -87,7 +86,9 @@ fun OnBoardingScreen(
                         }
                     )
                 }
-                NewsButton(text = buttonState.value[1], onClick = {
+                NewsButton(
+                    text = buttonState.value[1],
+                    onClick = {
                     scope.launch {
                         if (pagerState.currentPage == 2) {
                             event(OnBoardingEvent.SaveAppEntry)

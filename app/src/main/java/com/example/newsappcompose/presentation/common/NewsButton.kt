@@ -14,16 +14,16 @@ import com.example.newsappcompose.util.Dimens.SmallRoundedCorner
 @Composable
 fun NewsButton(text: String, onClick: () -> Unit) {
     Button(
-        onClick = onClick, colors = ButtonDefaults.buttonColors(
+        onClick = onClick,
+        colors = ButtonDefaults.buttonColors(
             containerColor = MaterialTheme.colorScheme.primary,
             contentColor = Color.White
         ),
         shape = RoundedCornerShape(size = SmallRoundedCorner)
-    )
-    {
+    ){
         Text(
             text = text,
-            style = MaterialTheme.typography.displayMedium.copy(fontWeight = FontWeight.SemiBold)
+            style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.SemiBold)
         )
     }
 }
@@ -36,7 +36,7 @@ fun NewsTextButton(
     TextButton(onClick = onClick) {
         Text(
             text = text,
-            style = MaterialTheme.typography.displayMedium.copy(fontWeight = FontWeight.SemiBold),
+            style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.SemiBold),
             color = Color.Gray
         )
     }

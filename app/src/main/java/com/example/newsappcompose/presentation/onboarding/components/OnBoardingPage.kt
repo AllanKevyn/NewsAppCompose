@@ -33,22 +33,21 @@ fun OnBoardingPage(
         Image(
             modifier = Modifier
                 .fillMaxWidth()
-                .fillMaxHeight(0.6f),
+                .fillMaxHeight(0.60f),
             painter = painterResource(id = page.image),
             contentDescription = null,
             contentScale = ContentScale.Crop
         )
         Spacer(modifier = Modifier.height(MediumPadding))
         Text(
-            text = page.title,
             modifier = Modifier.padding(horizontal = BigPadding),
+            text = page.title,
             style = MaterialTheme.typography.displaySmall.copy(fontWeight = FontWeight.Bold),
             color = Color(android.graphics.Color.BLACK)
         )
-        Spacer(modifier = Modifier.height(SmallPadding))
         Text(
-            text = page.description,
             modifier = Modifier.padding(horizontal = BigPadding),
+            text = page.description,
             style = MaterialTheme.typography.bodyMedium,
             color = Color(android.graphics.Color.GRAY)
         )
