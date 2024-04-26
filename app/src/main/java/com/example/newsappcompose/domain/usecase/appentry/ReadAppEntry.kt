@@ -1,4 +1,4 @@
-package com.example.newsappcompose.domain.usecase
+package com.example.newsappcompose.domain.usecase.appentry
 
 import android.text.BoringLayout
 import com.example.newsappcompose.domain.manager.LocalUserManager
