@@ -62,12 +62,12 @@ fun ArticleCard(
         Column(
             verticalArrangement = Arrangement.SpaceAround,
             modifier = Modifier
-                .padding(horizontal = ExtraSmallPadding)
+                .padding(horizontal = ExtraSmallPadding2)
                 .height(ArticleCardSize)
         ) {
             Text(
                 text = article.title,
-                style = MaterialTheme.typography.bodyMedium,
+                style = MaterialTheme.typography.titleSmall,
                 color = Color.Black,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis
