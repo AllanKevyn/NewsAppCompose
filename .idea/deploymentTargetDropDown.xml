@@ -2,6 +2,9 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="ShowDetailsScreenPreview">
+        <State />
+      </entry>
       <entry key="ShowShimmerEffectPreview">
         <State />
       </entry>
