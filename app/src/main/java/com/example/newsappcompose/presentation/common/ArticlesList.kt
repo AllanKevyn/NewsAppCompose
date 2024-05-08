@@ -14,6 +14,25 @@ import com.example.newsappcompose.domain.model.Article
 import com.example.newsappcompose.util.Dimens.ExtraSmallPadding2
 import com.example.newsappcompose.util.Dimens.MediumPadding
 
+// it's like normal adapter
+@Composable
+fun ArticlesList(
+    modifier: Modifier = Modifier,
+    articles: List<Article>,
+    onClick: (Article) -> Unit
+) {
+
+    LazyColumn(
+        modifier = modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.spacedBy(MediumPadding),
+        contentPadding = PaddingValues(all = ExtraSmallPadding2)
+    ) {
+        items(count = articles.size) {
+            val article = articles[it]
+            ArticleCard(article = article, onClick = { onClick(article) })
+        }
+    }
+}
 
 // it's like normal adapter
 @Composable
@@ -26,7 +45,7 @@ fun ArticlesList(
     val handlePagingResult = handlePagingResult(article = articles)
     if (handlePagingResult) {
         LazyColumn(
-            modifier = Modifier.fillMaxSize(),
+            modifier = modifier.fillMaxSize(),
             verticalArrangement = Arrangement.spacedBy(MediumPadding),
             contentPadding = PaddingValues(all = ExtraSmallPadding2)
         ) {
